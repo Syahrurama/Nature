@@ -1,0 +1,159 @@
+/* General Body */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Mengatur konten agar berada di tengah secara horizontal */
+    align-items: center; /* Mengatur konten agar berada di tengah secara vertikal */
+    min-height: 100vh; /* Memastikan tinggi minimal adalah 100% dari viewport */
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8eff1 100%); /* Gradasi lembut untuk latar belakang */
+}
+
+/* Container */
+.google-search-container {
+    max-width: 800px;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1); /* Bayangan lebih halus */
+    text-align: center;
+    margin: 0 auto; /* Memastikan kontainer berada di tengah */
+    transition: transform 0.3s ease;
+    animation: slideIn 0.8s ease-in-out forwards; /* Durasi animasi lebih lama */
+    margin-top: 50px;
+}
+
+.google-search-container:hover {
+    transform: translateY(-5px); /* Efek angkat saat hover */
+}
+
+/* Animasi Slide In */
+@keyframes slideIn {
+    0% {
+        transform: translateY(-50px); /* Mulai dari atas */
+        opacity: 0; /* Memulai dengan transparansi */
+    }
+    100% {
+        transform: translateY(0); /* Kembali ke posisi normal */
+        opacity: 1; /* Menjadi sepenuhnya terlihat */
+    }
+}
+
+/* Title */
+.search-title {
+    font-size: 42px; /* Ukuran font yang lebih besar */
+    background: linear-gradient(to right, #FE0002, #FFCCCB); /* Gradasi halus dari merah ke merah muda */
+    -webkit-background-clip: text; /* Gradasi hanya pada teks */
+    color: transparent; /* Teks menjadi transparan */
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 1px; /* Jarak antar huruf */
+    animation: fadeIn 0.5s ease forwards; /* Animasi fade-in untuk judul */
+    opacity: 0; /* Memulai dengan transparansi */
+    margin-top: -50px;
+}
+
+/* Animasi Fade In untuk Judul */
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Memulai dengan transparansi */
+        transform: translateY(-20px); /* Mulai dari atas */
+    }
+    100% {
+        opacity: 1; /* Menjadi sepenuhnya terlihat */
+        transform: translateY(0); /* Kembali ke posisi normal */
+    }
+}
+
+/* Image */
+#swissImage {
+    width: 90%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    border: 5px solid #ffcccb; /* Warna border yang lembut */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Tambah efek bayangan */
+    animation: zoomIn 1.1s ease forwards; /* Animasi zoom-in saat gambar muncul */
+}
+
+#swissImage:hover {
+    transform: scale(1.03); /* Efek zoom saat hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Bayangan lebih halus saat hover */
+}
+
+/* Animasi Zoom In untuk Gambar */
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.8); /* Mulai dari skala kecil */
+        opacity: 0; /* Memulai dengan transparansi */
+    }
+    50% {
+        transform: scale(1.05); /* Sedikit lebih besar dari ukuran normal */
+        opacity: 0.5; /* Menjadi setengah transparan */
+    }
+    100% {
+        transform: scale(1); /* Kembali ke skala normal */
+        opacity: 1; /* Menjadi sepenuhnya terlihat */
+    }
+}
+
+/* Indicators */
+.indicators {
+    margin: 30px 0;
+}
+
+.indicator {
+    display: inline-block;
+    width: 18px; /* Lebar sedikit lebih kecil */
+    height: 18px;
+    margin: 5px;
+    border-radius: 50%;
+    border: 3px solid #b1a8a8;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Tambah efek pembesaran */
+}
+
+.indicator.active {
+    background-color: #ff7373; /* Warna aktif yang lebih menarik */
+}
+
+.indicator:hover {
+    transform: scale(1.2); /* Efek pembesaran saat hover */
+}
+
+/* Flight Info */
+.flight-info {
+    font-size: 20px; /* Ukuran font yang lebih besar */
+    color: #555; /* Warna lembut */
+    margin: 20px 0;
+}
+
+/* Info Section */
+.info-section {
+    text-align: left;
+    font-size: 18px; /* Ukuran font yang lebih besar */
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Button */
+.google-search-container button {
+    padding: 14px 30px; /* Penyesuaian padding */
+    font-size: 18px; /* Ukuran font yang lebih besar */
+    color: #ffffff;
+    background-color: #ff7373; /* Warna latar belakang */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Tambah transisi */
+    outline: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Bayangan pada tombol */
+}
+
+.google-search-container button:hover {
+    background-color: white; /* Ganti warna latar belakang saat hover */
+    color: #ff7373; /* Ubah warna teks saat hover */
+    border: 2px solid #ff7373; /* Tambah border saat hover */
+    transform: translateY(-2px); /* Efek angkat saat hover */
+}
